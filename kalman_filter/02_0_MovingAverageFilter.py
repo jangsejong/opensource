@@ -18,6 +18,7 @@ def mov_avg_filter(x_n, x_meas):
     x_avg = np.mean(x_n)
     return x_avg, x_n
 
+
 # Input parameters.
 n = 10
 n_samples = 500
