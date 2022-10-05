@@ -27,9 +27,6 @@ img = cv2.imread("wife.jpg")
 img = cv2.resize(img, None, fx=0.4, fy=0.4)
 height, width, channels = img.shape
 
-
-
-
 # Detecting objects
 blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
 #네트워크에 넣어줄 이미지를 blob로 만들어준다.
