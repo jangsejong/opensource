@@ -1,0 +1,99 @@
+#:kivy 1.0.9
+
+#color theme
+# R: 126 G: 212 B:217 L: 85 Light Blue 1
+# R: 217 G: 201 B:137 L: 85 Light Baje
+# R: 115 G: 166 B:217 L: 85 Light Blue 2
+# R: 217 G: 142 B: 93 L: 85 Baje
+# R:  99 G: 104 B:219 L: 86 Dark Blue
+
+<ImageGeneratorMain>:    
+    canvas:
+        Color: 
+            rgba: 115 / 255, 166 / 255, 217 / 255, 1
+
+        Rectangle:
+            pos: 0, 0
+            size: 175, root.height
+        
+        Color:
+            rgba: 1, 1, 1, 1
+
+    # limits where the user can draw
+    StencilView:
+        size: root.width - 175, root.height
+        pos: 175, 0
+
+        # image canvas
+        ImageCanvas:
+            id: ImageCanvas
+            pos: 175, 0
+            size: root.width, root.height
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: 175, root.height / 2
+        pos: 0, root.height / 2
+        padding: 5
+
+        # main ui buttons
+        Button:
+            text: "Import Image"
+            size_hint: 0.98, 0.05
+            size: 175, 50
+            pos_hint: {'center_x': 0.5}
+            on_press: root.import_image()
+            background_color: 99 / 255, 104 / 255, 219 / 255, 1
+            color: 217 / 255, 142 / 255, 93 / 255, 1
+
+        Button:
+            text: "Export Image"
+            size_hint: 0.98, 0.05
+            size: 175, 50
+            pos_hint: {'center_x': 0.5}
+            on_press: root.export_image()
+            background_color: 99 / 255, 104 / 255, 219 / 255, 1
+            color: 217 / 255, 142 / 255, 93 / 255, 1
+        
+        Button:
+            text: "Erase"
+            size_hint: 0.98, 0.05
+            size: 175, 50
+            pos_hint: {'center_x': 0.5}
+            on_press: root.select_eraser()
+            background_color: 99 / 255, 104 / 255, 219 / 255, 1
+            color: 217 / 255, 142 / 255, 93 / 255, 1
+
+        Button:
+            text: "Draw"
+            size_hint: 0.98, 0.05
+            size: 175, 50
+            pos_hint: {'center_x': 0.5}
+            on_press: root.select_pen()
+            background_color: 99 / 255, 104 / 255, 219 / 255, 1
+            color: 217 / 255, 142 / 255, 93 / 255, 1
+
+        Button:
+            text: "Stable Difusion"
+            size_hint: 0.98, 0.05
+            size: 175, 50
+            pos_hint: {'center_x': 0.5}
+            on_press: root.select_stable_diffusion()
+            background_color: 99 / 255, 104 / 255, 219 / 255, 1
+            color: 217 / 255, 142 / 255, 93 / 255, 1
+
+        Button:
+            text: "Latant Difusion"
+            size_hint: 0.98, 0.05
+            size: 175, 50
+            pos_hint: {'center_x': 0.5}
+            on_press: root.select_latant_diffusion()
+            background_color: 99 / 255, 104 / 255, 219 / 255, 1
+            color: 217 / 255, 142 / 255, 93 / 255, 1
+
+    SecondaryMenu:
+        id: SecondaryMenu
+        orientation: 'vertical'
+        size: 175, root.height / 2
+        pos: 0, 0
+        padding: 10
