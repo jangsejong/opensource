@@ -2,7 +2,6 @@ package com.blackstonedj;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-
 import org.bytedeco.javacpp.avcodec;
 import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.FFmpegFrameRecorder;
