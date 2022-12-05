@@ -47,6 +47,7 @@ def particle_filter(z_meas, pt, wt):
     wt = np.ones((1, Npt)) / Npt
 
     return x_esti, pt, wt
+
 # Input parameters.
 time_end = 20
 dt = 0.05
