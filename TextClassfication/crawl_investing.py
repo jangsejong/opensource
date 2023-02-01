@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 import requests
-
 from bs4 import BeautifulSoup
 import random
 import pandas as pd
