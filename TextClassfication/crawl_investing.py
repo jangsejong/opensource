@@ -11,7 +11,6 @@ import pandas as pd
 2. ip 우회?
 """
 
-
 def get_content(news_href, investing_url):
     articles_href = investing_url+news_href
     req = requests.get(articles_href, headers=header)
