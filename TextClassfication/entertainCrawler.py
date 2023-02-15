@@ -94,7 +94,7 @@ class EntertainAttribute():
                     url = NewsURL + str(year) + '-' + \
                         str(month) + '-' + str(day)
 
-                    # 끝페이지보다 더 큰 값을 이동하면 자동으로 마지막 페이지로 이동하게 된다.
+                    ## 끝페이지보다 더 큰 값을 이동하면 자동으로 마지막 페이지로 이동하게 된다.
                     madeURL.append(url)
         return madeURL
 
