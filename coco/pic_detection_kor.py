@@ -5,6 +5,7 @@ from matplotlib.pyplot import draw
 # print(cv2.__version__)#4.5.5
 import numpy as np
 
+
 # Load Yolo
 net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
 classes = []
